@@ -1,6 +1,9 @@
 import insideOne from '../images/sharedimage(3).jpg'
 import insideTwo from '../images/sharedimage.jpg'
 import insideThree from '../images/sharedimage(4).jpg'; 
+import insideFour from '../images/Multimedia(6).jpg'; 
+import insideFive from '../images/Multimedia(11).jpg'; 
+
 
 const Scene = {
     insideOne:{
@@ -78,10 +81,82 @@ const Scene = {
       pitch: 5.0,
       yaw: 30.0,
       cssClass: 'moveScene',
-      scene: 'insideTwo', 
+      scene: 'insideFour', 
      }
      
    }
  },
+
+     insideFour:{
+        title:'interior cuatro',
+        image: insideFour,
+        pitch: 18.30,
+        yaw: 40.12,
+        hotSpots:{
+            caja1:{
+                type: 'custom',
+                pitch: 18.28,
+                yaw: 40.12,
+                cssClass: 'hotSpotElement',
+            },
+            caja2:{
+                type: 'custom',
+                pitch: 25.77,
+                yaw: 159.30,
+                cssClass: 'hotSpotElement',           
+            },
+            cajaroja:{
+                type: 'custom',
+                pitch: 26.05,
+                yaw: 98.77,
+                cssClass: 'hotSpotElement',
+            },
+
+            nextScene:{
+                type: 'custom',
+                pitch: 2.26,
+                yaw: 124.72,
+                cssClass: 'moveScene',
+                scene: 'insideOne'
+            }
+            
+        }
+    },
+
+         insideFive:{
+        title:'interior cinco',
+        image: insideFive,
+        pitch: 18.30,
+        yaw: 40.12,
+        hotSpots:{
+            caja1:{
+                type: 'custom',
+                pitch: 18.28,
+                yaw: 40.12,
+                cssClass: 'hotSpotElement',
+            },
+            caja2:{
+                type: 'custom',
+                pitch: 25.77,
+                yaw: 159.30,
+                cssClass: 'hotSpotElement',           
+            },
+            cajaroja:{
+                type: 'custom',
+                pitch: 26.05,
+                yaw: 98.77,
+                cssClass: 'hotSpotElement',
+            },
+
+            nextScene:{
+                type: 'custom',
+                pitch: 2.26,
+                yaw: 124.72,
+                cssClass: 'moveScene',
+                scene: 'insideOne'
+            }
+            
+        }
+    },
 }
 export default Scene;
