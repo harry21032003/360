@@ -7,7 +7,7 @@ import insideFive from '../images/Multimedia(11).jpg';
 
 const Scene = {
     insideOne:{
-        title:'interior unoxd',
+        title:'interior uno',
         image: insideOne,
         pitch: 18.30,
         yaw: 40.12,
