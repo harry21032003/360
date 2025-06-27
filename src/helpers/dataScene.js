@@ -85,21 +85,16 @@ const Scene = {
     insideThree: {
   title: 'interior tres',
   image: insideThree,
-  pitch: 15.0,
-  yaw: 120.0,
+  pitch: -8.70,
+  yaw: -173,
   hotSpots: {
-    caja1: {
-      type: 'custom',
-      pitch: 18.0,
-      yaw: 80.0,
-      cssClass: 'hotSpotElement',
-    },
-    volver: {
+   
+    nextScene: {
       type: 'custom',
       pitch: 5.0,
       yaw: 30.0,
       cssClass: 'moveScene',
-      scene: 'insideFour', 
+      scene: 'insideOne', 
      }
      
    }
