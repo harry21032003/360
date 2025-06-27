@@ -199,27 +199,19 @@ const Scene = {
              insideSeven:{
         title:'interior siete',
         image: insideSeven,
-        pitch: 18.30,
-        yaw: 40.12,
+        pitch: 9.42,
+        yaw: 14.33,
         hotSpots:{
             
             nextScene:{
                 type: 'custom',
-                pitch: 25.5,
-                yaw: 141.7,
+                pitch: -2.71,
+                yaw: 163,
                 cssClass: 'moveScene',
-                scene: 'insideTwo'
-            },
-            
-            nextScene1:{
-                type: 'custom',
-                pitch: -0.61,
-                yaw: 105.9,
-                cssClass: 'moveScene',
-                scene: 'insideFive'
-            }
-            
+                scene: 'insideFour'
+            }  
         }
     },
+    
 }
 export default Scene;
