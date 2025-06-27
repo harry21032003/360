@@ -37,7 +37,7 @@ const Scene = {
                 yaw: 0.5,
                 cssClass: 'moveScene',
                 scene: 'insideTwo'
-            }.
+            },
 
             nextScene1:{
                 type: 'custom',
