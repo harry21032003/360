@@ -173,17 +173,9 @@ const Scene = {
          insideSix:{
         title:'interior seis',
         image: insideSix,
-        pitch: 18.30,
-        yaw: 40.12,
+        pitch: 2.34,
+        yaw: -0.25,
         hotSpots:{
-            
-            nextScene:{
-                type: 'custom',
-                pitch: 25.5,
-                yaw: 141.7,
-                cssClass: 'moveScene',
-                scene: 'insideTwo'
-            },
             
             nextScene1:{
                 type: 'custom',
