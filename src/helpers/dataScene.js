@@ -152,5 +152,31 @@ const Scene = {
             
         }
     },
+    
+         insideSix:{
+        title:'interior seis',
+        image: insideSix,
+        pitch: 18.30,
+        yaw: 40.12,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 25.5,
+                yaw: 141.7,
+                cssClass: 'moveScene',
+                scene: 'insideTwo'
+            },
+            
+            nextScene1:{
+                type: 'custom',
+                pitch: -0.61,
+                yaw: 105.9,
+                cssClass: 'moveScene',
+                scene: 'insideFive'
+            }
+            
+        }
+    },
 }
 export default Scene;
