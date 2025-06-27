@@ -205,8 +205,8 @@ const Scene = {
             
             nextScene:{
                 type: 'custom',
-                pitch: -2.71,
-                yaw: 163,
+                pitch: 0.65,
+                yaw: -164.2,
                 cssClass: 'moveScene',
                 scene: 'insideFour'
             }  
