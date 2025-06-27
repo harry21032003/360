@@ -37,6 +37,14 @@ const Scene = {
                 yaw: 0.5,
                 cssClass: 'moveScene',
                 scene: 'insideTwo'
+            }.
+
+            nextScene1:{
+                type: 'custom',
+                pitch: -9.46,
+                yaw: 179.2,
+                cssClass: 'moveScene',
+                scene: 'insideThree'
             }
             
         }
