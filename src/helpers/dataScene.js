@@ -9,8 +9,9 @@ const Scene = {
     insideOne:{
         title:'interior uno',
         image: insideOne,
-        pitch: 18.30,
-        yaw: 40.12,
+        pitch: -1.22,
+        yaw: 1.17,
+        
         hotSpots:{
             caja1:{
                 type: 'custom',
