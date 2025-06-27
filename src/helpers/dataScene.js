@@ -102,31 +102,21 @@ const Scene = {
         pitch: 18.30,
         yaw: 40.12,
         hotSpots:{
-            caja1:{
-                type: 'custom',
-                pitch: 18.28,
-                yaw: 40.12,
-                cssClass: 'hotSpotElement',
-            },
-            caja2:{
-                type: 'custom',
-                pitch: 25.77,
-                yaw: 159.30,
-                cssClass: 'hotSpotElement',           
-            },
-            cajaroja:{
-                type: 'custom',
-                pitch: 26.05,
-                yaw: 98.77,
-                cssClass: 'hotSpotElement',
-            },
-
+            
             nextScene:{
                 type: 'custom',
-                pitch: 2.26,
-                yaw: 124.72,
+                pitch: 25.5,
+                yaw: 141.7,
                 cssClass: 'moveScene',
-                scene: 'insideOne'
+                scene: 'insideTwo'
+            },
+            
+            nextScene1:{
+                type: 'custom',
+                pitch: -0.61,
+                yaw: 105.9,
+                cssClass: 'moveScene',
+                scene: 'insideFive'
             }
             
         }
