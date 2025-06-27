@@ -4,6 +4,7 @@ import insideThree from '../images/CubiertaBoteCrujiaProaBabor.jpg';
 import insideFour from '../images/ProaCostadoBabor.jpg'; 
 import insideFive from '../images/ProaCostadoEstribor.jpg'; 
 import insideSix from '../images/CubiertaPrincipalCostadoBabor.jpg'; 
+import insideSeven from '../images/CubiertaPrincipalCostadoEstribor.jpg'; 
 
 const Scene = {
     
@@ -122,6 +123,14 @@ const Scene = {
                 yaw: 105.9,
                 cssClass: 'moveScene',
                 scene: 'insideFive'
+            },
+            
+            nextScene2:{
+                type: 'custom',
+                pitch: -8.13,
+                yaw: -138.0,
+                cssClass: 'moveScene',
+                scene: 'insideSeven'
             }
             
         }
@@ -164,6 +173,32 @@ const Scene = {
          insideSix:{
         title:'interior seis',
         image: insideSix,
+        pitch: 18.30,
+        yaw: 40.12,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 25.5,
+                yaw: 141.7,
+                cssClass: 'moveScene',
+                scene: 'insideTwo'
+            },
+            
+            nextScene1:{
+                type: 'custom',
+                pitch: -0.61,
+                yaw: 105.9,
+                cssClass: 'moveScene',
+                scene: 'insideFive'
+            }
+            
+        }
+    },
+
+             insideSeven:{
+        title:'interior siete',
+        image: insideSeven,
         pitch: 18.30,
         yaw: 40.12,
         hotSpots:{
