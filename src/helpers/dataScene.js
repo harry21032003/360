@@ -3,7 +3,7 @@ import insideTwo from '../images/CubiertaBoteCrujiaProa.jpg'
 import insideThree from '../images/CubiertaBoteCrujiaProaBabor.jpg'; 
 import insideFour from '../images/ProaCostadoBabor.jpg'; 
 import insideFive from '../images/ProaCostadoEstribor.jpg'; 
-import insideSix from '../images/CubiertaPrincipalCostadoEstribor.jpg'; 
+import insideSix from '../images/CubiertaPrincipalCostadoBabor.jpg'; 
 
 const Scene = {
     
@@ -130,8 +130,8 @@ const Scene = {
          insideFive:{
         title:'interior cinco',
         image: insideFive,
-        pitch: 18.30,
-        yaw: 40.12,
+        pitch: 17.7,
+        yaw:  10.1,
         hotSpots:{
             
             nextScene:{
@@ -144,8 +144,8 @@ const Scene = {
             
             nextScene1:{
                 type: 'custom',
-                pitch: 2.65,
-                yaw: -89.5,
+                pitch: -3.81,
+                yaw: -89.0,
                 cssClass: 'moveScene',
                 scene: 'insideFour'
             },
