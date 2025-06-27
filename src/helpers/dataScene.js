@@ -5,7 +5,7 @@ import insideFour from '../images/ProaCostadoBabor.jpg';
 import insideFive from '../images/ProaCostadoEstribor.jpg'; 
 import insideSix from '../images/CubiertaPrincipalCostadoBabor.jpg'; 
 import insideSeven from '../images/CubiertaPrincipalCostadoEstribor.jpg'; 
-import insideEight from '../images/CubiertaDeTrabajo'; 
+import insideEight from '../images/CubiertaDeTrabajo.jpg'; 
 
 const Scene = {
     
