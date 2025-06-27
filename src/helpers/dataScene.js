@@ -5,6 +5,7 @@ import insideFour from '../images/ProaCostadoBabor.jpg';
 import insideFive from '../images/ProaCostadoEstribor.jpg'; 
 import insideSix from '../images/CubiertaPrincipalCostadoBabor.jpg'; 
 import insideSeven from '../images/CubiertaPrincipalCostadoEstribor.jpg'; 
+import insideEight from '../images/CubiertaDeTrabajo'; 
 
 const Scene = {
     
@@ -97,6 +98,14 @@ const Scene = {
       yaw: 30.0,
       cssClass: 'moveScene',
       scene: 'insideOne', 
+     },
+    
+      nextScene1: {
+      type: 'custom',
+      pitch: 26.8,
+      yaw: 179,
+      cssClass: 'moveScene',
+      scene: 'insideEight', 
      }
      
    }
@@ -204,6 +213,24 @@ const Scene = {
             }  
         }
     },
+
+              insideEight:{
+        title:'interior ocho',
+        image: insideEight,
+        pitch: 9.42,
+        yaw: 14.33,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 0.65,
+                yaw: -164.2,
+                cssClass: 'moveScene',
+                scene: 'insideFour'
+            }  
+        }
+    },
+    
     
 }
 export default Scene;
