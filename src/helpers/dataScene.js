@@ -3,9 +3,10 @@ import insideTwo from '../images/CubiertaBoteCrujiaProa.jpg'
 import insideThree from '../images/CubiertaBoteCrujiaProaBabor.jpg'; 
 import insideFour from '../images/ProaCostadoBabor.jpg'; 
 import insideFive from '../images/ProaCostadoEstribor.jpg'; 
-
+import insideSix from '../images/CubiertaPrincipalCostadoEstribor.jpg'; 
 
 const Scene = {
+    
     insideOne:{
         title:'interior uno',
         image: insideOne,
