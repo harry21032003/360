@@ -89,6 +89,27 @@ const MiniMap = ({ onHotspotClick, currentSceneKey }) => {
             onClick={() => onHotspotClick('insideTwelve')}
             title="Interior doce"
           />
+            <button
+            className={`mini-hotspot ${currentSceneKey === 'insideThirteen' ? 'active' : ''}`}
+            style={{ top: '10%', left: '25%' }}
+            onClick={() => onHotspotClick('insideThirteen')}
+            title="Interior trece"
+          />
+
+           <button
+            className={`mini-hotspot ${currentSceneKey === 'insideFourteen' ? 'active' : ''}`}
+            style={{ top: '70%', left: '20%' }}
+            onClick={() => onHotspotClick('insideFourteen')}
+            title="Interior catorce"
+          />
+
+            <button
+            className={`mini-hotspot ${currentSceneKey === 'insideFifteen' ? 'active' : ''}`}
+            style={{ top: '10%', left: '30%' }}
+            onClick={() => onHotspotClick('insideFifteen')}
+            title="Interior quince"
+          />
+              
         </>
       );
     }
