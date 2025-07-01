@@ -289,14 +289,14 @@ const Scene = {
                   insideNine:{
         title:'interior nueve',
         image: insideNine,
-        pitch: 9.42,
-        yaw: 14.33,
+        pitch:3.09,
+        yaw:71.0,
         hotSpots:{
             
             nextScene:{
                 type: 'custom',
-                pitch: 2.47,
-                yaw: 62.5,
+                pitch: 1.02,
+                yaw: -10.7,
                 cssClass: 'moveScene',
                 scene: 'insideTen'
             }  ,
