@@ -31,7 +31,7 @@ const MiniMap = ({ onHotspotClick, currentSceneKey }) => {
           />
             <button
             className={`mini-hotspot ${currentSceneKey === 'insideNine' ? 'active' : ''}`}
-            style={{ top: '70%', left: '20%' }}
+            style={{ top: '55%', left: '46%' }}
             onClick={() => onHotspotClick('insideNine')}
             title="Interior nueve"
           />
