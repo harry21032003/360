@@ -567,8 +567,8 @@ const Scene = {
                  insideEighteen:{
         title:'interior dieciocho',
         image: insideEighteen,
-        pitch:-12.40,
-        yaw: 99.35,
+        pitch:0.58,
+        yaw: 143.9,
         hotSpots:{
             
             nextScene:{
@@ -593,8 +593,8 @@ const Scene = {
                  insideNineteen:{
         title:'interior diecinueve',
         image: insideNineteen,
-        pitch:-12.40,
-        yaw: 99.35,
+        pitch:1.72,
+        yaw: -145,
         hotSpots:{
             
             nextScene:{
