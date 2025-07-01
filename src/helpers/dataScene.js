@@ -244,8 +244,8 @@ const Scene = {
               insideEight:{
         title:'interior ocho',
         image: insideEight,
-        pitch: 9.42,
-        yaw: 14.33,
+        pitch:11.70,
+        yaw: 156,
         hotSpots:{
             
             nextScene:{
@@ -281,7 +281,7 @@ const Scene = {
                 pitch: 4.82,
                 yaw: 81.9,
                 cssClass: 'moveScene',
-                scene: 'insideOne'
+                scene: 'insideThree'
             } 
         }
     },
