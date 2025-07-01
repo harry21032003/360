@@ -8,8 +8,6 @@ import insideSeven from '../images/CubiertaPrincipalCostadoEstribor.jpg';
 import insideEight from '../images/CubiertaDeTrabajo.jpg'; 
 import insideNine from '../images/CabrestanteCostadoBabor.jpg'; 
 import insideTen from '../images/CabrestanteCostadoEstribor.jpg'; 
-import insideEleven from '../images/CubiertaBoteCostadoBaborProa.jpg'; 
-
 
 const Scene = {
     
@@ -275,10 +273,6 @@ const Scene = {
                 scene: 'insideEight'
             }  
         }
-    },
-
-    },
-    
-    
+    },    
 }
 export default Scene;
