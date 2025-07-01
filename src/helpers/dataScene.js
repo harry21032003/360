@@ -364,8 +364,8 @@ const Scene = {
                       insideEleven:{
         title:'interior once',
         image: insideEleven,
-        pitch: 9.42,
-        yaw: 14.33,
+        pitch: 0.41,
+        yaw: -141,
         hotSpots:{
             
             nextScene:{
