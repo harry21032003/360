@@ -328,24 +328,24 @@ const Scene = {
                           insideTwelve:{
         title:'interior doce',
         image: insideTwelve,
-        pitch: 9.42,
-        yaw: 14.33,
+        pitch:3.95,
+        yaw: 156,
         hotSpots:{
             
             nextScene:{
                 type: 'custom',
-                pitch: -5.97,
-                yaw:-113,
+                pitch: -18.7,
+                yaw:159,
                 cssClass: 'moveScene',
-                scene: 'insideTwo'
+                scene: 'insideEight'
             },  
                         
             nextScene1:{
                 type: 'custom',
-                pitch: 36.4,
-                yaw:-54.2,
+                pitch: 19.71,
+                yaw: 54.7,
                 cssClass: 'moveScene',
-                scene: 'insideOne'
+                scene: 'insideThree'
             }  
         }
     }, 
