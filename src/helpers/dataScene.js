@@ -512,16 +512,16 @@ const Scene = {
              insideSixteen:{
         title:'interior diecisseis',
         image: insideSixteen,
-        pitch:-5.79,
-        yaw: 33.6,
+        pitch:-12.40,
+        yaw: 99.35,
         hotSpots:{
             
             nextScene:{
                 type: 'custom',
-                pitch: -50.4,
-                yaw: 0.50,
+                pitch: 2.25,
+                yaw: 133.3,
                 cssClass: 'moveScene',
-                scene: 'insideFourteen'
+                scene: 'insideThirteen'
             }  
         }
     },
