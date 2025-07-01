@@ -14,6 +14,9 @@ import insideThirteen from '../images/CuartoMaquinasCostadoBaborPopa.jpg';
 import insideFourteen from '../images/CuartoMaquinasCostadoBaborProa.jpg';
 import insideFifteen from '../images/CubiertaSuperiorCuartoMaquinas.jpg';
 import insideSixteen from '../images/CuartoMaquinasCostadoEstribor.jpg';
+import insideSeventeen from '../images/ServoMotorCrujia.jpg.jpg';
+import insideEighteen from '../images/ServoMotorCostadoBabor.jpg';
+import insideNineteen from '../images/ServoMotorCostadoEstribor.jpg';
 
 
 const Scene = {
@@ -510,8 +513,68 @@ const Scene = {
     },
 
              insideSixteen:{
-        title:'interior diecisseis',
+        title:'interior dieciseis',
         image: insideSixteen,
+        pitch:-12.40,
+        yaw: 99.35,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 2.25,
+                yaw: 133.3,
+                cssClass: 'moveScene',
+                scene: 'insideThirteen'
+            } , 
+
+            nextScene:{
+                type: 'custom',
+                pitch: 0.63,
+                yaw: 82.40,
+                cssClass: 'moveScene',
+                scene: 'insideSeventeen'
+            }  
+            
+        }
+    },
+
+                 insideSeventeen:{
+        title:'interior diecisiete',
+        image: insideSeventeen,
+        pitch:-12.40,
+        yaw: 99.35,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 2.25,
+                yaw: 133.3,
+                cssClass: 'moveScene',
+                scene: 'insideEighteen'
+            }  
+        }
+    },
+
+                 insideEighteen:{
+        title:'interior dieciocho',
+        image: insideEighteen,
+        pitch:-12.40,
+        yaw: 99.35,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 2.25,
+                yaw: 133.3,
+                cssClass: 'moveScene',
+                scene: 'insideNine'
+            }  
+        }
+    },
+
+                 insideNineteen:{
+        title:'interior diecinueve',
+        image: insideNineteen,
         pitch:-12.40,
         yaw: 99.35,
         hotSpots:{
