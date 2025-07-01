@@ -254,7 +254,35 @@ const Scene = {
                 yaw: 176,
                 cssClass: 'moveScene',
                 scene: 'insideThree'
-            }  
+            },
+                        nextScene1:{
+                type: 'custom',
+                pitch:7.60,
+                yaw: -167,
+                cssClass: 'moveScene',
+                scene: 'insideTen'
+            } ,
+                        nextScene2:{
+                type: 'custom',
+                pitch: 7.22,
+                yaw: 164,
+                cssClass: 'moveScene',
+                scene: 'insideNine'
+            } ,
+                        nextScene3:{
+                type: 'custom',
+                pitch:19.33,
+                yaw: 161,
+                cssClass: 'moveScene',
+                scene: 'insideTwelve'
+            }, 
+                        nextScene4:{
+                type: 'custom',
+                pitch: 4.82,
+                yaw: 81.9,
+                cssClass: 'moveScene',
+                scene: 'insideOne'
+            } 
         }
     },
 
@@ -278,14 +306,14 @@ const Scene = {
                   insideTen:{
         title:'interior diez',
         image: insideTen,
-        pitch: 9.42,
-        yaw: 14.33,
+        pitch:4.97,
+        yaw: -111,
         hotSpots:{
             
             nextScene:{
                 type: 'custom',
-                pitch: 53.5,
-                yaw:57.56,
+                pitch: 48.7,
+                yaw:57.4,
                 cssClass: 'moveScene',
                 scene: 'insideOne'
             },  
