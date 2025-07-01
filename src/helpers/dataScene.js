@@ -14,7 +14,7 @@ import insideThirteen from '../images/CuartoMaquinasCostadoBaborPopa.jpg';
 import insideFourteen from '../images/CuartoMaquinasCostadoBaborProa.jpg';
 import insideFifteen from '../images/CubiertaSuperiorCuartoMaquinas.jpg';
 import insideSixteen from '../images/CuartoMaquinasCostadoEstribor.jpg';
-import insideSeventeen from '../images/ServoMotorCrujia.jpg.jpg';
+import insideSeventeen from '../images/ServoMotorCrujia.jpg';
 import insideEighteen from '../images/ServoMotorCostadoBabor.jpg';
 import insideNineteen from '../images/ServoMotorCostadoEstribor.jpg';
 
