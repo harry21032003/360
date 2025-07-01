@@ -277,21 +277,6 @@ const Scene = {
         }
     },
 
-                      insideEleven:{
-        title:'interior once',
-        image: insideEleven,
-        pitch: 9.42,
-        yaw: 14.33,
-        hotSpots:{
-            
-            nextScene:{
-                type: 'custom',
-                pitch: 1.65,
-                yaw: -11.44,
-                cssClass: 'moveScene',
-                scene: 'insideTen'
-            }  
-        }
     },
     
     
