@@ -12,6 +12,9 @@ import insideEleven from '../images/CubiertaBoteCostadoBaborProa.jpg';
 import insideTwelve from '../images/CubiertaBoteCostadoBabor.jpg';
 import insideThirteen from '../images/CuartoMaquinasCostadoBaborPopa.jpg';
 import insideFourteen from '../images/CuartoMaquinasCostadoBaborProa.jpg';
+import insideFifteen from '../images/CubiertaSuperiorCuartoMaquinas.jpg';
+
+
 
 const Scene = {
     
@@ -483,11 +486,28 @@ const Scene = {
                 pitch: 31.69,
                 yaw: 42.74,
                 cssClass: 'moveScene',
-                scene: 'insideOne'
+                scene: 'insideFifteen'
             } 
             
         }
     }, 
+
+             insideFifteen:{
+        title:'interior siete',
+        image: insideFifteen,
+        pitch: 9.42,
+        yaw: 14.33,
+        hotSpots:{
+            
+            nextScene:{
+                type: 'custom',
+                pitch: 0.65,
+                yaw: -164.2,
+                cssClass: 'moveScene',
+                scene: 'insideFour'
+            }  
+        }
+    },
     
 }
 export default Scene;
