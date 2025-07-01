@@ -567,7 +567,7 @@ const Scene = {
                 pitch: 2.25,
                 yaw: 133.3,
                 cssClass: 'moveScene',
-                scene: 'insideEighteen'
+                scene: 'insideSeventeen'
             }  ,
 
                 nextScene1:{
