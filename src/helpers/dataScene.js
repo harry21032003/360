@@ -464,27 +464,19 @@ const Scene = {
             
             nextScene:{
                 type: 'custom',
-                pitch: -18.7,
-                yaw:159,
+                pitch: 8.35,
+                yaw:-178,
                 cssClass: 'moveScene',
-                scene: 'insideEight'
+                scene: 'insideThirteen'
             },  
                         
             nextScene1:{
                 type: 'custom',
-                pitch: 19.71,
-                yaw: 54.7,
+                pitch: 25.8,
+                yaw: -169,
                 cssClass: 'moveScene',
-                scene: 'insideThree'
-            },
-            
-            nextScene2:{
-                type: 'custom',
-                pitch: -21,
-                yaw: 84.4,
-                cssClass: 'moveScene',
-                scene: 'insideTen'
-            }  
+                scene: 'insideEight'
+            } 
             
         }
     }, 
