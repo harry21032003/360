@@ -527,7 +527,7 @@ const Scene = {
                 scene: 'insideThirteen'
             } , 
 
-            nextScene:{
+            nextScene1:{
                 type: 'custom',
                 pitch: 0.63,
                 yaw: 82.40,
