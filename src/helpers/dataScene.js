@@ -430,10 +430,10 @@ const Scene = {
             
             nextScene:{
                 type: 'custom',
-                pitch: 0.65,
-                yaw: -164.2,
+                pitch: 51.0,
+                yaw: -54.8,
                 cssClass: 'moveScene',
-                scene: 'insideFour'
+                scene: 'insideEight'
             }  
         }
     },
