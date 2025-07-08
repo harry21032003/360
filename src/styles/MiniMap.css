@@ -106,14 +106,22 @@
   background: #ffffffee;
   border: none;
   border-radius: 50%;
-  padding: clamp(0.5em, 1.5vw, 1em);  
-  font-size: clamp(1rem, 3vw, 1.8rem);  
+  padding: clamp(0.5em, 1.5vw, 1em);
+  font-size: clamp(1rem, 3vw, 1.8rem);
   cursor: pointer;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1001;
-  min-width: clamp(2.5em, 6vw, 3em);    
-  min-height: clamp(2.5em, 6vw, 3em);
+  min-width: clamp(2.5em, 6vw, 2em);
+  min-height: clamp(2.5em, 6vw, 2em);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+
+.toggle-map-button:hover {
+  transform: scale(1.1);  
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.3);  
+}
+
 
 
 
