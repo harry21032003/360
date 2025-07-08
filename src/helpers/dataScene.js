@@ -1,6 +1,6 @@
 import insideOne from '../images/PuenteDeGobierno.jpg'
 import insideTwo from '../images/CubiertaBoteCrujiaProa.jpg'
-import insideThree from '../images/CubiertaBoteCrujiaProaBabor.png'; 
+import insideThree from '../images/CubiertaBoteCrujiaProaBabor.jpg'; 
 import insideFour from '../images/ProaCostadoBabor.jpg'; 
 import insideFive from '../images/ProaCostadoEstribor.jpg'; 
 import insideSix from '../images/CubiertaPrincipalCostadoBabor.jpg'; 
