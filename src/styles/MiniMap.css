@@ -36,7 +36,7 @@
 }
 
 /* Landscape (rotate & center) */
-@media (orientation: landscape) and (max-width: 768px) {
+@media (orientation: landscape) and (max-width: 950px) {
   .mini-map-container {
     top: 50%;
     left: 50%;
