@@ -1,13 +1,13 @@
-/* Modal contenedor principal */
+
 .mini-map-container {
   position: fixed;
   bottom: 3vh;
   right: 2vw;
-  width: clamp(280px, 45vw, 360px);   /* Mantiene tamaño adaptable */
-  aspect-ratio: 537 / 860;            /* Mantiene proporción del plano */
+  width: clamp(280px, 45vw, 360px);   
+  aspect-ratio: 537 / 860;            
   background: rgb(255, 255, 255);
   border-radius: 0.5em;
-  padding: 1.5%;                      /* Padding relativo al contenedor */
+  padding: 1.5%;                    
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1000;
   display: flex;
@@ -33,7 +33,7 @@
   pointer-events: none;
 }
 
-/* Landscape (rotar modal) */
+
 @media (orientation: landscape) and (max-width: 950px) {
   .mini-map-container {
     top: 50%;
@@ -52,7 +52,7 @@
   }
 }
 
-/* Contenedor del mapa que conserva proporción */
+
 .map-wrapper {
   position: relative;
   width: 100%;
@@ -63,7 +63,7 @@
   overflow: hidden;
 }
 
-/* Imagen del mapa */
+
 .map-image {
   width: 100%;
   height: auto;
@@ -72,16 +72,16 @@
   object-fit: contain;
 }
 
-/* Ajuste para versiones del plano */
+
 .map-image.plan-v1 {
   aspect-ratio: 537 / 860;
 }
 
 .map-image.plan-v2 {
-  aspect-ratio: 450 / 857;
+  aspect-ratio: 537 / 860;
 }
 
-/* Hotspots proporcionales */
+
 .mini-hotspot {
   position: absolute;
   width: 1em;
@@ -98,7 +98,7 @@
   background-color: #28a745;
 }
 
-/* Botón para mostrar el mapa */
+
 .toggle-map-button {
   position: fixed;
   bottom: 2vh;
@@ -106,16 +106,17 @@
   background: #ffffffee;
   border: none;
   border-radius: 50%;
-  padding: 1em;
-  font-size: 1.5rem;
+  padding: clamp(0.5em, 1.5vw, 1em);  
+  font-size: clamp(1rem, 3vw, 1.8rem);  
   cursor: pointer;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1001;
-  min-width: 3em;
-  min-height: 3em;
+  min-width: clamp(2.5em, 6vw, 4em);    
+  min-height: clamp(2.5em, 6vw, 4em);
 }
 
-/* Botón para cerrar dentro del modal */
+
+
 .close-map-button {
   position: absolute;
   top: 0.5em;
@@ -127,7 +128,6 @@
   cursor: pointer;
 }
 
-/* Contenedor de los botones para cambiar de plano */
 .map-switch-buttons {
   display: flex;
   justify-content: center;
