@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 3vh;
   right: 2vw;
-  width: clamp(280px, 45vw, 360px);   
+  width: clamp(180px, 45vw, 360px);   
   aspect-ratio: 537 / 860;            
   background: rgb(255, 255, 255);
   border-radius: 0.5em;
@@ -145,7 +145,6 @@
   flex-wrap: wrap;
 }
 
-/* Botones para cambiar plano */
 .switch-button {
   padding: 0.3em 0.8em;
   border: 0.25em solid #cccccc;
@@ -153,7 +152,7 @@
   border-radius: 0.3em;
   cursor: pointer;
   font-size: 0.9rem;
-  min-width: 4em;
+  min-width: 3em;
   max-width: 7em;
   text-align: center;
   box-sizing: border-box;
