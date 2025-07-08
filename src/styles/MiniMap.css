@@ -106,7 +106,7 @@
   background: #ffffffee;
   border: none;
   border-radius: 50%;
-  padding: clamp(0.5em, 1.5vw, 1em);
+  padding: clamp(0.5em, 1.5vw, 0.6em);
   font-size: clamp(1rem, 3vw, 1.8rem);
   cursor: pointer;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.2);
