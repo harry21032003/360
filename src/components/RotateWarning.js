@@ -1,11 +1,14 @@
 import React from 'react';
-import './RotateWarning.css'; 
+import './RotateWarning.css';
+import rotateIcon from '../images/rotate.png'; // <- coloca tu ícono aquí
 
-export default function RotateWarning() {
+function RotateWarning() {
   return (
     <div className="rotate-warning">
-      <div className="rotate-icon">🔄</div>
-      <p>Gira tu celular para ver el contenido en horizontal</p>
+      <img src={rotateIcon} alt="Gira tu dispositivo" className="rotate-icon" />
+      <p>Por favor, gira tu dispositivo para ver mejor el recorrido 360°</p>
     </div>
   );
 }
+
+export default RotateWarning;
