@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import rotateAnim from '../images/rotate.gif'; // o tu SVG/Lottie
+import rotateAnim from '../images/rotate.png'; 
 import './RotateWarning.css';
 
 function RotateWarning() {
