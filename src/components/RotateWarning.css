@@ -1,0 +1,30 @@
+/* Ocultar por defecto */
+.rotate-warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 2000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rotate-warning .rotate-icon {
+  font-size: 6vh;
+  margin-bottom: 20px;
+}
+
+/* Mostrar solo en portrait y pantallas pequeñas */
+@media (orientation: portrait) and (max-width: 950px) {
+  .rotate-warning {
+    display: flex;
+  }
+}
