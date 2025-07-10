@@ -15,21 +15,19 @@
   font-size: 1.2rem;
   color: #333;
 
-  /* Transición suave */
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Mostrar */
+
 .rotate-warning.show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-/* Ocultar */
 .rotate-warning.hide {
   opacity: 0;
   transform: translateY(-20px);
