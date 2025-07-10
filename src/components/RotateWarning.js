@@ -19,10 +19,15 @@ function RotateWarning() {
 
   return (
     <div className={`rotate-warning ${isPortrait ? 'show' : 'hide'}`}>
-      <img src={rotateAnim} alt="Gira tu dispositivo" className="rotate-icon" />
-      <p>Por favor, gira tu dispositivo para ver mejor el recorrido 360°</p>
+      <div className="rotate-content">
+        <img src={rotateAnim} alt="Gira tu dispositivo" className="rotate-icon" />
+        <h1 className="rotate-title">Gira tu dispositivo</h1>
+        <p className="rotate-text">Para disfrutar mejor del recorrido 360° del barco</p>
+        <div className="cotecmar-brand">COTECMAR</div>
+      </div>
     </div>
   );
 }
 
 export default RotateWarning;
+
