@@ -1,19 +1,18 @@
-/* Capa que se pone ENCIMA del hotspot original */
+
 .hotSpotOverlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Deja pasar eventos al hotspot original */
+  pointer-events: none; 
 }
 
-/* Al activar, crece (solo visual, no bloquea el click) */
 .hotSpotOverlay.active {
   transform: scale(1.8);
   z-index: 10;
 }
 
-/* Imagen preview encima */
+
 .hotSpotOverlay .hotspot-preview {
   width: 100%;
   height: 100%;
@@ -23,7 +22,7 @@
   transition: opacity 0.3s ease;
 }
 
-/* Mostrar imagen en hover/active */
+
 .hotSpotOverlay.active .hotspot-preview {
   opacity: 1;
 }
@@ -45,7 +44,6 @@
   pointer-events: none;
 }
 
-/* Mostrar texto en hover/active */
 .hotSpotOverlay.active .hotspot-label {
   opacity: 1;
   bottom: -25px;
