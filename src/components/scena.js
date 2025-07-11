@@ -105,12 +105,16 @@ export default function Scene() {
         content={modalContent}
       />
 
-      <button className="fullscreen-button" onClick={handleFullScreen}>
+      <button
+        className="fullscreen-button"
+        onClick={handleFullScreen}
+      >
         ⛶
       </button>
     </>
   );
 }
+
 
 
 
