@@ -22,7 +22,7 @@ import insideNineteen from '../images/ServoMotorCostadoEstribor.jpg';
 const Scene = {
     
     insideOne:{
-        title:'interior unosixduwuprueba',
+        title:'interior uno',
         image: insideOne,
         pitch: -1.22,
         yaw: 1.17,
