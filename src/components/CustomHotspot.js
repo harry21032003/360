@@ -6,19 +6,13 @@ export default function CustomHotspot({ previewImage, label }) {
 
   return (
     <div
-      className={`hotSpotElementCustom ${isActive ? 'active' : ''}`}
+      className={`hotSpotOverlay ${isActive ? 'active' : ''}`}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       onTouchStart={() => setActive(true)}
       onTouchEnd={() => setActive(false)}
     >
-      {/* Hotspot base original */}
-      <div className="hotSpotElement"></div>
-
-      {/* Imagen preview que aparece solo al hacer hover */}
       <img className="hotspot-preview" src={previewImage || ''} alt="Preview" />
-
-      {/* Texto que aparece solo al hacer hover */}
       <div className="hotspot-label">{label}</div>
     </div>
   );
