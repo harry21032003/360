@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CustomHotspot.css';
 
 export default function CustomHotspot({ previewImage, label }) {
   const [isActive, setActive] = useState(false);
@@ -11,7 +12,7 @@ export default function CustomHotspot({ previewImage, label }) {
       onTouchStart={() => setActive(true)}
       onTouchEnd={() => setActive(false)}
     >
-      <img className="hotspot-preview" src={previewImage} alt="Preview" />
+      <img className="hotspot-preview" src={previewImage || ''} alt="Preview" />
       <div className="hotspot-label">{label}</div>
     </div>
   );
