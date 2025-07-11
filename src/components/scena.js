@@ -5,16 +5,58 @@ import dataScene from '../helpers/dataScene';
 import MiniMap from './MiniMap';
 import hotspotContent from '../helpers/hotspotContent';
 import HotspotModal from './HotspotModal';
-import CustomHotspot from './CustomHotspot';  
+import CustomHotspot from './CustomHotspot';
 import '../styles/index.css';
 import './CustomHotspot.css';
-
 
 export default function Scene() {
   const [scene, setScene] = useState({ ...dataScene['insideOne'], key: 'insideOne' });
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
 
+  const hotSpots = (element, i) => {
+    if (element.cssClass === 'moveScene') {
+      return (
+        <Pannellum.Hotspot
+          key={i}
+          type={element.type}
+          yaw={element.yaw}
+          pitch={element.pitch}
+          cssClass={element.cssClass}
+          tooltip={(hotSpotDiv) => {
+            const root = ReactDOM.createRoot(hotSpotDiv);
+            root.render(
+              <CustomHotspot
+                previewImage={element.previewImage}
+                label={element.label}
+              />
+            );
+          }}
+          tooltipArg={element}
+          handleClick={() => {
+            setScene({ ...dataScene[element.scene], key: element.scene });
+          }}
+        />
+      );
+    } else if (element.cssClass === 'hotSpotElement') {
+      return (
+        <Pannellum.Hotspot
+          key={i}
+          type={element.type}
+          yaw={element.yaw}
+          pitch={element.pitch}
+          cssClass={element.cssClass}
+          handleClick={() => {
+            const content = hotspotContent[element.key];
+            if (content) {
+              setModalContent(content);
+              setModalOpen(true);
+            }
+          }}
+        />
+      );
+    }
+  };
 
   const handleMiniMapClick = (sceneKey) => {
     if (dataScene[sceneKey]) {
@@ -22,16 +64,15 @@ export default function Scene() {
     }
   };
 
-  // Función para activar pantalla completa
   const handleFullScreen = () => {
     const elem = document.documentElement;
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { // Firefox
+    } else if (elem.mozRequestFullScreen) {
       elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari y Opera
+    } else if (elem.webkitRequestFullscreen) {
       elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { // IE/Edge
+    } else if (elem.msRequestFullscreen) {
       elem.msRequestFullscreen();
     }
   };
@@ -64,7 +105,6 @@ export default function Scene() {
         content={modalContent}
       />
 
-      {/* Botón para fullscreen solo en móvil */}
       <button
         className="fullscreen-button"
         onClick={handleFullScreen}
@@ -74,4 +114,5 @@ export default function Scene() {
     </>
   );
 }
+
 
