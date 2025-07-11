@@ -5,7 +5,7 @@ import dataScene from '../helpers/dataScene';
 import MiniMap from './MiniMap';
 import hotspotContent from '../helpers/hotspotContent';
 import HotspotModal from './HotspotModal';
-import CustomHotspot from './CustomHotspot';  // 👈 importado
+import CustomHotspot from './CustomHotspot';  
 import '../styles/index.css';
 import './CustomHotspot.css';
 
