@@ -12,13 +12,13 @@ export default function CustomHotspot({ previewImage, label }) {
       onTouchStart={() => setActive(true)}
       onTouchEnd={() => setActive(false)}
     >
-      {/* Hotspot base original */}
+      {/* Hotspot base */}
       <div className="hotSpotElement"></div>
 
-      {/* Imagen preview que aparece solo al hacer hover */}
+      {/* Imagen preview */}
       <img className="hotspot-preview" src={previewImage || ''} alt="Preview" />
 
-      {/* Texto que aparece solo al hacer hover */}
+      {/* Texto */}
       <div className="hotspot-label">{label}</div>
     </div>
   );
