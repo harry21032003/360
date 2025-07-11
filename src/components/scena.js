@@ -116,7 +116,7 @@ tooltip={(hotSpotDiv) => {
         content={modalContent}
       />
 
-      {/* ✅ Botón para fullscreen solo en móvil */}
+      {/* Botón para fullscreen solo en móvil */}
       <button
         className="fullscreen-button"
         onClick={handleFullScreen}
