@@ -32,6 +32,7 @@ tooltip={(hotSpotDiv) => {
   );
 }}
 
+
           tooltipArg={element}
           handleClick={() => {
             const content = hotspotContent[element.key];
