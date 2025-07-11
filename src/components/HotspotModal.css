@@ -1,25 +1,38 @@
-/* Overlay que cubre el hotspot original */
-.hotSpotOverlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 50px;   /* Ajusta al tamaño real de tu hotspot base */
+/* Contenedor que envuelve el hotspot original y la capa extra */
+.hotSpotElementCustom {
+  position: relative;
+  width: 50px;
   height: 50px;
-  pointer-events: none; /* permite que el click siga funcionando en el hotspot original */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Imagen de preview (oculta inicialmente) */
-.hotSpotOverlay .hotspot-preview {
+/* Al activar: crece suavemente */
+.hotSpotElementCustom.active {
+  transform: scale(1.8);
+  z-index: 10;
+}
+
+/* Imagen de preview, encima del hotspot original */
+.hotSpotElementCustom .hotspot-preview {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.3s ease;
   z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
-/* Texto debajo del hotspot (oculto inicialmente) */
-.hotSpotOverlay .hotspot-label {
+/* Mostrar imagen cuando activo */
+.hotSpotElementCustom.active .hotspot-preview {
+  opacity: 1;
+}
+
+/* Texto debajo del círculo */
+.hotSpotElementCustom .hotspot-label {
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -32,18 +45,16 @@
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease, bottom 0.3s ease;
+  pointer-events: none;
   z-index: 3;
 }
 
-/* Mostrar cuando activo */
-.hotSpotOverlay.active .hotspot-preview {
-  opacity: 1;
-}
-
-.hotSpotOverlay.active .hotspot-label {
+/* Mostrar texto cuando activo */
+.hotSpotElementCustom.active .hotspot-label {
   opacity: 1;
   bottom: -25px;
 }
+
 
 
 
