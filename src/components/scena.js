@@ -25,43 +25,46 @@ export default function Scene() {
           pitch={element.pitch}
           cssClass={element.cssClass}
 
-tooltip={(hotSpotDiv) => {
-  const root = ReactDOM.createRoot(hotSpotDiv);
-  root.render(
-    <CustomHotspot previewImage={element.previewImage} label={element.label} />
-  );
-}}
-
-
-          tooltipArg={element}
-          handleClick={() => {
-            const content = hotspotContent[element.key];
-            if (content) {
-              setModalContent(content);
-              setModalOpen(true);
-            }
-          }}
-        />
-      );
-    } else if (element.cssClass === 'moveScene') {
-      return (
-        <Pannellum.Hotspot
-          key={i}
-          type={element.type}
-          yaw={element.yaw}
-          pitch={element.pitch}
-          cssClass={element.cssClass}
-
-//aquiva la vaina esa 
-
-          tooltipArg={element}
-          handleClick={() => {
-            setScene({ ...dataScene[element.scene], key: element.scene });
-          }}
-        />
-      );
-    }
-  };
+const hotSpots = (element, i) => {
+  if (element.cssClass === 'moveScene') {
+    return (
+      <Pannellum.Hotspot
+        key={i}
+        type={element.type}
+        yaw={element.yaw}
+        pitch={element.pitch}
+        cssClass={element.cssClass}
+        tooltip={(hotSpotDiv) => {
+          const root = ReactDOM.createRoot(hotSpotDiv);
+          root.render(
+            <CustomHotspot previewImage={element.previewImage} label={element.label} />
+          );
+        }}
+        tooltipArg={element}
+        handleClick={() => {
+          setScene({ ...dataScene[element.scene], key: element.scene });
+        }}
+      />
+    );
+  } else if (element.cssClass === 'hotSpotElement') {
+    return (
+      <Pannellum.Hotspot
+        key={i}
+        type={element.type}
+        yaw={element.yaw}
+        pitch={element.pitch}
+        cssClass={element.cssClass}
+        handleClick={() => {
+          const content = hotspotContent[element.key];
+          if (content) {
+            setModalContent(content);
+            setModalOpen(true);
+          }
+        }}
+      />
+    );
+  }
+};
 
   const handleMiniMapClick = (sceneKey) => {
     if (dataScene[sceneKey]) {
