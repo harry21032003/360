@@ -1,4 +1,4 @@
-/* Contenedor que envuelve el hotspot original y la capa extra */
+
 .hotSpotElementCustom {
   position: relative;
   width: 50px;
@@ -7,13 +7,13 @@
   transition: transform 0.3s ease;
 }
 
-/* Al activar: crece suavemente */
+
 .hotSpotElementCustom.active {
   transform: scale(1.8);
   z-index: 10;
 }
 
-/* Imagen de preview, encima del hotspot original */
+
 .hotSpotElementCustom .hotspot-preview {
   position: absolute;
   top: 0; left: 0;
@@ -26,12 +26,12 @@
   transition: opacity 0.3s ease;
 }
 
-/* Mostrar imagen cuando activo */
+
 .hotSpotElementCustom.active .hotspot-preview {
   opacity: 1;
 }
 
-/* Texto debajo del círculo */
+
 .hotSpotElementCustom .hotspot-label {
   position: absolute;
   bottom: -20px;
@@ -49,7 +49,7 @@
   z-index: 3;
 }
 
-/* Mostrar texto cuando activo */
+
 .hotSpotElementCustom.active .hotspot-label {
   opacity: 1;
   bottom: -25px;
