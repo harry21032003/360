@@ -52,12 +52,7 @@ tooltip={(hotSpotDiv) => {
           pitch={element.pitch}
           cssClass={element.cssClass}
 
-tooltip={(hotSpotDiv) => {
-  const root = ReactDOM.createRoot(hotSpotDiv);
-  root.render(
-    <CustomHotspot previewImage={element.previewImage} label={element.label} />
-  );
-}}
+//aquiva la vaina esa 
 
           tooltipArg={element}
           handleClick={() => {
