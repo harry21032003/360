@@ -51,15 +51,14 @@ tooltip={(hotSpotDiv) => {
           yaw={element.yaw}
           pitch={element.pitch}
           cssClass={element.cssClass}
-          tooltip={(hotSpotDiv) => {
-            ReactDOM.render(
-              <CustomHotspot
-                previewImage={element.previewImage}
-                label={element.label}
-              />,
-              hotSpotDiv
-            );
-          }}
+
+tooltip={(hotSpotDiv) => {
+  const root = ReactDOM.createRoot(hotSpotDiv);
+  root.render(
+    <CustomHotspot previewImage={element.previewImage} label={element.label} />
+  );
+}}
+
           tooltipArg={element}
           handleClick={() => {
             setScene({ ...dataScene[element.scene], key: element.scene });
