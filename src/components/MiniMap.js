@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+eeeeeeimport React, { useState } from 'react';
 import '../styles/MiniMap.css';
 import planV1 from '../images/planoV1.png';
 import planV2 from '../images/planoV2.png';
@@ -41,7 +41,7 @@ const MiniMap = ({ onHotspotClick, currentSceneKey }) => {
             className={`mini-hotspot ${currentSceneKey === 'insideEleven' ? 'active' : ''}`}
             style={{ top: '24%', left: '72%' }}
             onClick={() => onHotspotClick('insideEleven')}
-            title="Interior once"
+            title="Interior onceprueba"
           />
 
             <button
