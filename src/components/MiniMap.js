@@ -1,4 +1,4 @@
-eeeeeeimport React, { useState } from 'react';
+import React, { useState } from 'react';
 import '../styles/MiniMap.css';
 import planV1 from '../images/planoV1.png';
 import planV2 from '../images/planoV2.png';
