@@ -1,4 +1,4 @@
-/* Fondo que cubre toda la pantalla */
+
 .rotate-warning {
   position: fixed;
   top: 0;
@@ -16,26 +16,26 @@
   transition: opacity 0.5s ease;
 }
 
-/* Mostrar aviso */
+
 .rotate-warning.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Ocultar aviso */
+
 .rotate-warning.hide {
   opacity: 0;
   pointer-events: none;
 }
 
-/* Contenedor interno */
+
 .rotate-content {
   text-align: center;
   padding: 20px;
   max-width: 90%;
 }
 
-/* Icono girando */
+
 .rotate-icon {
   width: 80px;
   height: auto;
@@ -43,13 +43,12 @@
   margin-bottom: 20px;
 }
 
-/* Animación girar */
+
 @keyframes spin {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Título grande */
 .rotate-title {
   font-size: 1.8em;
   margin-bottom: 10px;
@@ -57,14 +56,14 @@
   letter-spacing: 1px;
 }
 
-/* Texto descriptivo */
+
 .rotate-text {
   font-size: 1em;
   opacity: 0.9;
   margin-bottom: 15px;
 }
 
-/* Branding Cotecmar */
+
 .cotecmar-brand {
   font-size: 0.9em;
   font-weight: bold;
