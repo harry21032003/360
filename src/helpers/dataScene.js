@@ -52,7 +52,9 @@ const Scene = {
                 pitch: -14.6,
                 yaw: 0.5,
                 cssClass: 'moveScene',
-                scene: 'insideTwo'
+                scene: 'insideTwo',
+                previewImage: insideTwo,       
+                label: 'Ir al costado babor'
             },
 
             nextScene1:{
@@ -60,7 +62,9 @@ const Scene = {
                 pitch: -9.46,
                 yaw: 179.2,
                 cssClass: 'moveScene',
-                scene: 'insideThree'
+                scene: 'insideThree',
+                previewImage: insideTwo,       
+                label: 'Ir al costado babor'
             }
             
         }
