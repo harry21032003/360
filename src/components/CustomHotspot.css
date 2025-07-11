@@ -1,42 +1,40 @@
-/* Contenedor principal del hotspot custom */
+/* Contenedor que envuelve el hotspot original y la capa extra */
 .hotSpotElementCustom {
   position: relative;
   width: 50px;
   height: 50px;
-  border-radius: 50%;         /* mantiene el círculo base */
   cursor: pointer;
   transition: transform 0.3s ease;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
-  /* ❌ quitamos overflow: hidden */
 }
 
-/* Estado normal: de base no tiene nada más visible */
-
-/* Al activar (hover o presionado): crece suavemente */
+/* Al activar: crece suavemente */
 .hotSpotElementCustom.active {
   transform: scale(1.8);
   z-index: 10;
 }
 
-/* Imagen de preview dentro del hotspot, oculta de base (con opacity) */
+/* Imagen de preview, encima del hotspot original */
 .hotSpotElementCustom .hotspot-preview {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 50%;
-  opacity: 0;                    /* oculta de base */
+  object-fit: cover;
+  opacity: 0;
+  z-index: 2;
   transition: opacity 0.3s ease;
 }
 
-/* Mostrar imagen solo cuando activo */
+/* Mostrar imagen cuando activo */
 .hotSpotElementCustom.active .hotspot-preview {
   opacity: 1;
 }
 
-/* Texto debajo del preview */
+/* Texto debajo del círculo */
 .hotSpotElementCustom .hotspot-label {
   position: absolute;
-  bottom: -20px; 
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0,0,0,0.7);
@@ -45,13 +43,15 @@
   padding: 2px 4px;
   border-radius: 4px;
   white-space: nowrap;
-  opacity: 0;                 /* oculta de base */
+  opacity: 0;
   transition: opacity 0.3s ease, bottom 0.3s ease;
   pointer-events: none;
+  z-index: 3;
 }
 
-/* Mostrar texto solo cuando activo */
+/* Mostrar texto cuando activo */
 .hotSpotElementCustom.active .hotspot-label {
   opacity: 1;
   bottom: -25px;
 }
+
