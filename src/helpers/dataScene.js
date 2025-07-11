@@ -122,6 +122,8 @@ const Scene = {
       yaw: 30.0,
       cssClass: 'moveScene',
       scene: 'insideOne', 
+      previewImage: insideOne,       
+      label: 'Ir al costado babor'
      },
     
       nextScene1: {
@@ -130,8 +132,6 @@ const Scene = {
       yaw: 179,
       cssClass: 'moveScene',
       scene: 'insideEight', 
-      previewImage: insideOne,       
-      label: 'Ir al costado babor'
      },
 
     nextScene2: {
