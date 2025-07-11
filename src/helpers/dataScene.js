@@ -130,6 +130,8 @@ const Scene = {
       yaw: 179,
       cssClass: 'moveScene',
       scene: 'insideEight', 
+      previewImage: insideOne,       
+      label: 'Ir al costado babor'
      },
 
     nextScene2: {
