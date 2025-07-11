@@ -45,6 +45,7 @@ const Scene = {
                 pitch: 26.05,
                 yaw: 98.77,
                 cssClass: 'hotSpotElement',
+                 previewImage: insideTwo,
             },
 
             nextScene:{
