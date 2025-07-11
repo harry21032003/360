@@ -7,7 +7,7 @@ import hotspotContent from '../helpers/hotspotContent';
 import HotspotModal from './HotspotModal';
 import CustomHotspot from './CustomHotspot';  // 👈 importado
 import '../styles/index.css';
-import '../CustomHotspot.css';
+import './CustomHotspot.css';
 
 
 export default function Scene() {
