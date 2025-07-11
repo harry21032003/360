@@ -15,10 +15,10 @@ export default function CustomHotspot({ previewImage, label }) {
       {/* Hotspot base original */}
       <div className="hotSpotElement"></div>
 
-      {/* Imagen preview/}
+      {/* Imagen preview que aparece solo al hacer hover */}
       <img className="hotspot-preview" src={previewImage || ''} alt="Preview" />
 
-      {/* Texto */}
+      {/* Texto que aparece solo al hacer hover */}
       <div className="hotspot-label">{label}</div>
     </div>
   );
