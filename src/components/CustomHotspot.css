@@ -1,242 +1,53 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-.fullscreen-button {
-    position: fixed;
-    top: 1.5vh;
-    right: 1.5vw;
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 6px;
-    padding: 7px 11px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1002;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-    .fullscreen-button {
-        display: none;
-    }
-}
-
-/* === HOTSPOTS ORIGINALES === */
-.hotSpotElement .out {
-    border: 5px solid rgba(0, 123, 255, 0.8) !important;
-}
-
-.hotSpotElement .in {
-    background-color: rgba(0, 123, 255, 0.8) !important;
-}
-
-/* Hotspot de mover escena (rojo) */
-.moveScene .out {
-    border: 5px solid rgba(220, 53, 69, 0.8) !important;
-}
-
-.moveScene .in {
-    background-color: rgba(220, 53, 69, 0.9) !important;
-}
-
-/* Iconos para hotspots originales */
-.hotSpotElement .out::after {
-    content: 'i'; 
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.moveScene .out::after {
-    content: '→';
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-/* === HOTSPOTS PERSONALIZADOS (NUEVOS) === */
-
-/* Contenedor base */
+/* Contenedor /
 .hotSpotElementCustom {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 50%;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-
-/* Hotspot de información (azul) */
-.hotSpotElementCustom.info-hotspot {
-    background: radial-gradient(circle, rgba(0, 123, 255, 0.9) 30%, rgba(0, 123, 255, 0.4) 70%);
-    border: 3px solid rgba(0, 123, 255, 0.8);
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
-}
-
-/* Hotspot de navegación (rojo) */
-.hotSpotElementCustom.move-hotspot {
-    background: radial-gradient(circle, rgba(220, 53, 69, 0.9) 30%, rgba(220, 53, 69, 0.4) 70%);
-    border: 3px solid rgba(220, 53, 69, 0.8);
-    box-shadow: 0 0 15px rgba(220, 53, 69, 0.3);
-}
-
-/* Efecto hover */
-.hotSpotElementCustom:hover {
-    transform: scale(1.1);
-}
-
-/* Al activar */
+/ Al activar /
 .hotSpotElementCustom.active {
-    transform: scale(1.8);
-    z-index: 10;
+  transform: scale(1.8);
+  z-index: 10;
 }
-
-/* ICONOS PARA HOTSPOTS PERSONALIZADOS */
-/* Icono de información */
-.hotSpotElementCustom.info-hotspot::before {
-    content: 'i';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: serif;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Icono de navegación */
-.hotSpotElementCustom.move-hotspot::before {
-    content: '→';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Imagen preview */
+/ Imagen preview /
 .hotSpotElementCustom .hotspot-preview {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 2;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    border: 3px solid rgba(255,255,255,0.9);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
 }
-
-/* Mostrar imagen preview al hacer hover */
-.hotSpotElementCustom:hover .hotspot-preview {
-    opacity: 1;
-    visibility: visible;
+/ Mostrar imagen  /
+.hotSpotElementCustom.active .hotspot-preview {
+  opacity: 1;
 }
-
-/* Ocultar hotspot base cuando se muestra preview al hacer hover */
-.hotSpotElementCustom:hover .hotSpotElement,
-.hotSpotElementCustom:hover .moveScene {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* También mantener la funcionalidad con .active para compatibilidad */
-.hotSpotElementCustom.active .hotSpotElement,
-.hotSpotElementCustom.active .moveScene {
-    opacity: 0;
-}
-
-/* Texto/Label */
+/ Texto /
 .hotSpotElementCustom .hotspot-label {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.8);
-    color: white;
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, bottom 0.3s ease, visibility 0.3s ease;
-    pointer-events: none;
-    z-index: 3;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-    font-weight: 500;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  pointer-events: none;
+  z-index: 3;
 }
-
-/* Mostrar texto */
+/ Mostrar texto */
 .hotSpotElementCustom.active .hotspot-label {
-    opacity: 1;
-    visibility: visible;
-    bottom: -25px;
-}
-
-/* Animación de pulso */
-.hotSpotElementCustom::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: pulse 2s infinite;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Pulso para hotspots de info */
-.hotSpotElementCustom.info-hotspot::after {
-    border: 2px solid rgba(0, 123, 255, 0.4);
-}
-
-/* Pulso para hotspots de navegación */
-.hotSpotElementCustom.move-hotspot::after {
-    border: 2px solid rgba(220, 53, 69, 0.4);
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.3);
-        opacity: 0.2;
-    }
-    100% {
-        transform: scale(0.8);
-        opacity: 0.8;
-    }
+  opacity: 1;
+  bottom: -25px;
 }
 
 
