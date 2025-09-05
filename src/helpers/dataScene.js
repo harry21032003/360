@@ -17,6 +17,7 @@ import insideSixteen from '../images/CuartoMaquinasCostadoEstribor.jpg';
 import insideSeventeen from '../images/ServoMotorCrujia.jpg';
 import insideEighteen from '../images/ServoMotorCostadoBabor.jpg';
 import insideNineteen from '../images/ServoMotorCostadoEstribor.jpg';
+import caja1pdf from '../images/IHI_Niigata Marine Selection Guide_DN1907OM008.pdf';
 
 
 const Scene = {
@@ -34,6 +35,8 @@ const Scene = {
                 pitch: 18.28,
                 yaw: 40.12,
                 cssClass: 'hotSpotElement',
+                file: caja1pdf,
+                label: 'Descargar guía PDF',
             },
             caja2:{
                 type: 'custom',
@@ -629,6 +632,7 @@ const Scene = {
     
 }
 export default Scene;
+
 
 
 
