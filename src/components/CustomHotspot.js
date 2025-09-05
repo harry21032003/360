@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CustomHotspot.css';
 
-export default function CustomHotspot({ previewImage, label, action = 'move', onInfoClick, onMove }) {
+export default function CustomHotspot({ previewImage, label, action = 'move', file, onInfoClick, onMove }) {
   const [isActive, setActive] = useState(false);
 
   // Determinar clases según la acción
@@ -12,22 +12,26 @@ export default function CustomHotspot({ previewImage, label, action = 'move', on
 
   const handleClick = () => {
     if (action === 'download') {
-      // Descargar archivo (PDF, imagen, etc.)
+      if (!file) {
+        console.error("No se definió ningún archivo para descargar.");
+        return;
+      }
+      // Crear y disparar descarga
       const link = document.createElement('a');
-      link.href = previewImage;
-      link.download = previewImage.split('/').pop();
+      link.href = file;
+      link.download = file.split('/').pop(); // nombre del archivo
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-    } else if (action === 'info') {
-      // Mostrar modal con info
+    } 
+    else if (action === 'info') {
       if (onInfoClick) {
         onInfoClick();
       } else {
         console.log('Abrir modal de información');
       }
-    } else {
-      // Mover a otra escena
+    } 
+    else if (action === 'move') {
       if (onMove) {
         onMove();
       } else {
@@ -51,8 +55,8 @@ export default function CustomHotspot({ previewImage, label, action = 'move', on
         </div>
       </div>
 
-      {/* Preview solo si no es descarga */}
-      {previewImage && action !== 'download' && (
+      {/* Preview solo si es info (no para descarga) */}
+      {previewImage && action === 'info' && (
         <img
           className="hotspot-preview"
           src={previewImage}
@@ -68,8 +72,3 @@ export default function CustomHotspot({ previewImage, label, action = 'move', on
     </div>
   );
 }
-
-
-
-
-
