@@ -24,8 +24,8 @@
   transition: opacity 0.3s ease;
 }
 / Mostrar imagen  /
-.hotSpotElementCustom.active .hotspot-preview {
-  opacity: 1;
+/.hotSpotElementCustom.active .hotspot-preview {/
+  /opacity: 1;/
 }
 / Texto /
 .hotSpotElementCustom .hotspot-label {
