@@ -1,11 +1,20 @@
-
 .rotate-warning {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(160deg, #003366, #005588); /* azul Cotecmar */
+  /* Gradiente más dinámico con múltiples colores */
+  background: linear-gradient(135deg, 
+    #001122 0%, 
+    #003366 25%, 
+    #005588 50%, 
+    #0077aa 75%, 
+    #00aaff 100%);
+  /* Patrón de puntos sutil */
+  background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
   color: white;
   display: flex;
   justify-content: center;
@@ -13,62 +22,264 @@
   z-index: 2000;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(5px);
 }
-
 
 .rotate-warning.show {
   opacity: 1;
   pointer-events: auto;
+  animation: fadeInScale 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .rotate-warning.hide {
   opacity: 0;
   pointer-events: none;
+  animation: fadeOutScale 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .rotate-content {
   text-align: center;
-  padding: 20px;
-  max-width: 90%;
+  padding: 40px 30px;
+  max-width: 400px;
+  position: relative;
+  
+  /* Glassmorphism container */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  
+  /* Animación de entrada */
+  animation: contentSlideIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
 }
 
+/* Decoración de fondo animada */
+.rotate-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00aaff, #005588, #003366, #00aaff);
+  border-radius: 26px;
+  z-index: -1;
+  opacity: 0.6;
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
 
 .rotate-icon {
-  width: 80px;
-  height: auto;
-  animation: spin 2.5s linear infinite;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Ícono SVG de rotación personalizado */
+.rotate-icon::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #00aaff, #ffffff);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M1 4v6h6M23 20v-6h-6'/%3E%3Cpath d='M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15'/%3E%3C/svg%3E") no-repeat center;
+  mask-size: contain;
+  animation: rotateIcon 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
 
-@keyframes spin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Círculo de pulso detrás del ícono */
+.rotate-icon::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(0, 170, 255, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .rotate-title {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: clamp(1.5em, 4vw, 2.2em);
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #ffffff, #00aaff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: titleGlow 2s ease-in-out infinite alternate;
 }
-
 
 .rotate-text {
-  font-size: 1em;
-  opacity: 0.9;
-  margin-bottom: 15px;
+  font-size: clamp(0.9em, 2.5vw, 1.1em);
+  opacity: 0.95;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-
 .cotecmar-brand {
-  font-size: 0.9em;
-  font-weight: bold;
-  color: #00aaff; /* tono celeste corporativo */
-  margin-top: 10px;
+  font-size: clamp(0.8em, 2vw, 1em);
+  font-weight: 600;
+  background: linear-gradient(45deg, #00aaff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 170, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo en la marca */
+.cotecmar-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 3s infinite;
+}
+
+/* === ANIMACIONES === */
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes contentSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rotateIcon {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(1); }
+  75% { transform: rotate(270deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(0, 170, 255, 0.8);
+  }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 480px) {
+  .rotate-content {
+    padding: 30px 20px;
+    max-width: 90%;
+    margin: 20px;
+  }
+  
+  .rotate-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .rotate-icon::before {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .rotate-icon::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  .rotate-content {
+    padding: 25px 15px;
+  }
+  
+  .rotate-title {
+    margin-bottom: 10px;
+  }
+  
+  .rotate-text {
+    margin-bottom: 20px;
+  }
 }
 
 
