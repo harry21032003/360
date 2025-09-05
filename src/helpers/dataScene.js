@@ -64,7 +64,7 @@ const Scene = {
 
             nextScene1:{
                 type: 'custom',
-                action: 'info',
+                action: 'move',
                 pitch: -9.46,
                 yaw: 179.2,
                 cssClass: 'moveScene',
@@ -633,6 +633,7 @@ const Scene = {
     
 }
 export default Scene;
+
 
 
 
