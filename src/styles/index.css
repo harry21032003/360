@@ -152,14 +152,22 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-/* Mostrar imagen preview (oculta el icono) */
-.hotSpotElementCustom.active .hotspot-preview {
+/* Mostrar imagen preview al hacer hover */
+.hotSpotElementCustom:hover .hotspot-preview {
     opacity: 1;
     visibility: visible;
 }
 
-/* Ocultar icono cuando se muestra preview */
-.hotSpotElementCustom.active::before {
+/* Ocultar hotspot base cuando se muestra preview al hacer hover */
+.hotSpotElementCustom:hover .hotSpotElement,
+.hotSpotElementCustom:hover .moveScene {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* También mantener la funcionalidad con .active para compatibilidad */
+.hotSpotElementCustom.active .hotSpotElement,
+.hotSpotElementCustom.active .moveScene {
     opacity: 0;
 }
 
@@ -230,3 +238,4 @@
         opacity: 0.8;
     }
 }
+
