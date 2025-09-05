@@ -41,31 +41,6 @@
     background-color: rgba(220, 53, 69, 0.9) !important;
 }
 
-/* Iconos para hotspots originales */
-.hotSpotElement .out::after {
-    content: 'i'; 
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.moveScene .out::after {
-    content: '→';
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
 /* === HOTSPOTS PERSONALIZADOS (NUEVOS) === */
 
 /* Contenedor base */
@@ -206,6 +181,7 @@
         opacity: 0.8;
     }
 }
+
 
 
 
