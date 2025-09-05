@@ -103,38 +103,6 @@
     z-index: 10;
 }
 
-/* ICONOS PARA HOTSPOTS PERSONALIZADOS */
-/* Icono de información */
-.hotSpotElementCustom.info-hotspot::before {
-    content: 'i';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: serif;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Icono de navegación */
-.hotSpotElementCustom.move-hotspot::before {
-    content: '→';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    pointer-events: none;
-    z-index: 1;
-}
-
 /* Imagen preview */
 .hotSpotElementCustom .hotspot-preview {
     position: absolute;
@@ -238,6 +206,7 @@
         opacity: 0.8;
     }
 }
+
 
 
 
