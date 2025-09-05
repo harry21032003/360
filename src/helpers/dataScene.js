@@ -55,7 +55,7 @@ const Scene = {
                 cssClass: 'moveScene',
                 scene: 'insideTwo',
                 previewImage: insideTwo,       
-                label: 'Ir al costado babor'
+                label: 'Ir a Cubierta Bote Crujia Proa'
             },
 
             nextScene1:{
@@ -64,8 +64,8 @@ const Scene = {
                 yaw: 179.2,
                 cssClass: 'moveScene',
                 scene: 'insideThree',
-                previewImage: insideTwo,       
-                label: 'Ir al costado babor'
+                previewImage: insideThree,       
+                label: 'Ir a Cubierta Bote Crujia Proa Babor'
             }
             
         }
@@ -625,4 +625,5 @@ const Scene = {
     
 }
 export default Scene;
+
 
