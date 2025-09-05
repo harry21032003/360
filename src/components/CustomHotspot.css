@@ -45,7 +45,7 @@
   z-index: 3;
 }
 / Mostrar texto */
-/.hotSpotElementCustom.active .hotspot-label {
+/.hotSpotElementCustom.active .hotspot-label {/
  /*opacity: 1;
  /* bottom: -25px;
 }
