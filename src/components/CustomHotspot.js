@@ -1,4 +1,3 @@
-este es mi custom hotspot que le cambio? 
 
 import React, { useState } from 'react';
 import './CustomHotspot.css';
