@@ -23,25 +23,6 @@
     }
 }
 
-/* === HOTSPOTS PERSONALIZADOS (NUEVOS) === */
-
-/* Contenedor base */
-.hotSpotElementCustom {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 50%;
-}
-
-/* Hotspot de información (azul) */
-.hotSpotElementCustom.info-hotspot {
-    background: radial-gradient(circle, rgba(0, 123, 255, 0.9) 30%, rgba(0, 123, 255, 0.4) 70%);
-    border: 3px solid rgba(0, 123, 255, 0.8);
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
-}
-
 /* Efecto hover */
 .hotSpotElementCustom:hover {
     transform: scale(1.1);
@@ -156,6 +137,7 @@
         opacity: 0.8;
     }
 }
+
 
 
 
