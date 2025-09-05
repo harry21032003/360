@@ -30,6 +30,7 @@ const Scene = {
         hotSpots:{
             caja1:{
                 type: 'custom',
+                action: 'download', 
                 pitch: 18.28,
                 yaw: 40.12,
                 cssClass: 'hotSpotElement',
@@ -628,6 +629,7 @@ const Scene = {
     
 }
 export default Scene;
+
 
 
 
