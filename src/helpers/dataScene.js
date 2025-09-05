@@ -83,7 +83,7 @@ const Scene = {
                 pitch: -31.3,
                 yaw: 29.4,
                 cssClass: 'moveScene',
-                scene: 'insideFive'
+                scene: 'insideFive',
                 previewImage: insideSix,       
                 label: 'Ir a Cubierta Bote Crujia Proa Babor'
             },
@@ -628,6 +628,7 @@ const Scene = {
     
 }
 export default Scene;
+
 
 
 
