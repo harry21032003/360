@@ -76,6 +76,9 @@
     cursor: pointer;
     transition: transform 0.3s ease;
     border-radius: 50%;
+    /* IMPORTANTE: Asegurar que sea circular */
+    display: block;
+    overflow: hidden;
 }
 
 /* Hotspot de información (azul) */
@@ -118,6 +121,7 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     pointer-events: none;
     z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
 /* Icono de navegación */
@@ -133,6 +137,13 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     pointer-events: none;
     z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* OCULTAR ICONOS CUANDO SE MUESTRA PREVIEW */
+.hotSpotElementCustom:hover::before,
+.hotSpotElementCustom.active::before {
+    opacity: 0;
 }
 
 /* Imagen preview */
@@ -152,23 +163,11 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-/* Mostrar imagen preview al hacer hover */
-.hotSpotElementCustom:hover .hotspot-preview {
+/* Mostrar imagen preview */
+.hotSpotElementCustom:hover .hotspot-preview,
+.hotSpotElementCustom.active .hotspot-preview {
     opacity: 1;
     visibility: visible;
-}
-
-/* Ocultar hotspot base cuando se muestra preview al hacer hover */
-.hotSpotElementCustom:hover .hotSpotElement,
-.hotSpotElementCustom:hover .moveScene {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* También mantener la funcionalidad con .active para compatibilidad */
-.hotSpotElementCustom.active .hotSpotElement,
-.hotSpotElementCustom.active .moveScene {
-    opacity: 0;
 }
 
 /* Texto/Label */
@@ -193,25 +192,28 @@
 }
 
 /* Mostrar texto */
-.hotSpotElementCustom.active .hotspot-label {
+.hotSpotElementCustom.active .hotspot-label,
+.hotSpotElementCustom:hover .hotspot-label {
     opacity: 1;
     visibility: visible;
     bottom: -25px;
 }
 
-/* Animación de pulso */
+/* Animación de pulso - CORREGIDA */
 .hotSpotElementCustom::after {
     content: '';
     position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
     border-radius: 50%;
     opacity: 0.6;
     animation: pulse 2s infinite;
     z-index: -1;
     pointer-events: none;
+    /* IMPORTANTE: Asegurar que no interfiera con la forma */
+    display: block;
 }
 
 /* Pulso para hotspots de info */
@@ -238,4 +240,5 @@
         opacity: 0.8;
     }
 }
+
 
