@@ -22,7 +22,7 @@ import insideNineteen from '../images/ServoMotorCostadoEstribor.jpg';
 const Scene = {
     
     insideOne:{
-        title:'interior uno',
+        title:'Puente De Gobierno',
         image: insideOne,
         pitch: -1.22,
         yaw: 1.17,
@@ -72,7 +72,7 @@ const Scene = {
     },
 
         insideTwo:{
-        title:'interior dos',
+        title:'Cubierta Bote_Crujia Proa',
         image: insideTwo,
         pitch: -0.85,
         yaw: -8.3,
@@ -110,7 +110,7 @@ const Scene = {
     },
 
     insideThree: {
-  title: 'interior tres',
+  title: 'Cubierta Bote_crujia Proa_Babor',
   image: insideThree,
   pitch: -8.70,
   yaw: -173,
@@ -154,7 +154,7 @@ const Scene = {
  },
 
      insideFour:{
-        title:'interior cuatro',
+        title:'Proa Costado Babor',
         image: insideFour,
         pitch: 18.30,
         yaw: 40.12,
@@ -188,7 +188,7 @@ const Scene = {
     },
 
          insideFive:{
-        title:'interior cinco',
+        title:'Proa Costado Estribor',
         image: insideFive,
         pitch: 17.7,
         yaw:  10.1,
@@ -222,7 +222,7 @@ const Scene = {
     },
     
          insideSix:{
-        title:'interior seis',
+        title:'Cubierta Principal Costado Babor',
         image: insideSix,
         pitch: 2.34,
         yaw: -0.25,
@@ -240,7 +240,7 @@ const Scene = {
     },
 
              insideSeven:{
-        title:'interior siete',
+        title:'Cubierta Principal Costado Estribor',
         image: insideSeven,
         pitch: 9.42,
         yaw: 14.33,
@@ -257,7 +257,7 @@ const Scene = {
     },
 
               insideEight:{
-        title:'interior ocho',
+        title:'Cubierta De Trabajo',
         image: insideEight,
         pitch:11.70,
         yaw: 156,
@@ -302,7 +302,7 @@ const Scene = {
     },
 
                   insideNine:{
-        title:'interior nueve',
+        title:'Cabrestante Costado Babor',
         image: insideNine,
         pitch:3.09,
         yaw:71.0,
@@ -336,7 +336,7 @@ const Scene = {
     },
 
                   insideTen:{
-        title:'interior diez',
+        title:'Cabrestante Costado Estribor',
         image: insideTen,
         pitch:4.97,
         yaw: -111,
@@ -377,7 +377,7 @@ const Scene = {
     },   
 
                       insideEleven:{
-        title:'interior once',
+        title:'Cubierta Bote Costado Babor Proa',
         image: insideEleven,
         pitch: 0.41,
         yaw: -141,
@@ -402,7 +402,7 @@ const Scene = {
     }, 
 
                           insideTwelve:{
-        title:'interior doce',
+        title:'Cubierta Bote Costado Babor',
         image: insideTwelve,
         pitch:3.95,
         yaw: 156,
@@ -436,7 +436,7 @@ const Scene = {
     }, 
     
              insideThirteen:{
-        title:'interior trece',
+        title:'Cuarto de Maquinas Costado Babor Popa',
         image: insideThirteen,
         pitch: -1.05,
         yaw: 143,
@@ -469,7 +469,7 @@ const Scene = {
     },
 
                           insideFourteen:{
-        title:'interior catorce',
+        title:'Cuarto De Maquinas Costado Babor Proa',
         image: insideFourteen,
         pitch:3.95,
         yaw: 156,
@@ -503,7 +503,7 @@ const Scene = {
     }, 
 
              insideFifteen:{
-        title:'interior quince',
+        title:'Cubierta Superior Cuarto De Maquinas',
         image: insideFifteen,
         pitch:-5.79,
         yaw: 33.6,
@@ -520,7 +520,7 @@ const Scene = {
     },
 
              insideSixteen:{
-        title:'interior dieciseis',
+        title:'Cuarto De Maquinas Costado Estribor',
         image: insideSixteen,
         pitch:-12.40,
         yaw: 99.35,
@@ -546,7 +546,7 @@ const Scene = {
     },
 
                  insideSeventeen:{
-        title:'interior diecisiete',
+        title:'Servo Motor Crujia',
         image: insideSeventeen,
         pitch:-12.40,
         yaw: 99.35,
@@ -572,7 +572,7 @@ const Scene = {
     },
 
                  insideEighteen:{
-        title:'interior dieciocho',
+        title:'Servo Motor Costado Babor',
         image: insideEighteen,
         pitch:0.58,
         yaw: 143.9,
@@ -598,7 +598,7 @@ const Scene = {
     },
 
                  insideNineteen:{
-        title:'interior diecinueve',
+        title:'Servo Motor Costado Estribor',
         image: insideNineteen,
         pitch:1.72,
         yaw: -145,
@@ -625,3 +625,4 @@ const Scene = {
     
 }
 export default Scene;
+
