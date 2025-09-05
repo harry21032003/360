@@ -22,6 +22,13 @@
         display: none;
     }
 }
+.moveScene .out {
+  border: 5px solid rgba(220, 53, 69, 0.8) !important;
+}
+
+.moveScene .in {
+  background-color: rgba(220, 53, 69, 0.9) !important;
+}
 
 /* Efecto hover */
 .hotSpotElementCustom:hover {
@@ -137,6 +144,7 @@
         opacity: 0.8;
     }
 }
+
 
 
 
