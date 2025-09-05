@@ -85,8 +85,8 @@ html {
 
 .mini-hotspot {
   position: absolute;
-  width: clamp(0.5em, 1vw, 1em);
-  height: clamp(0.5em, 1vw, 1em);
+  width: clamp(1em, 1vw, 1em);      /* Cambié de 0.5em a 1em */
+  height: clamp(1em, 1vw, 1em);     /* Cambió de 0.5em a 1em */
   background-color: #007bff;
   border: 0.125em solid #fff;
   border-radius: 50%;
@@ -163,6 +163,7 @@ html {
   color: #fff;
   border-color: #007bff;
 }
+
 
 
 
