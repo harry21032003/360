@@ -23,15 +23,6 @@
     }
 }
 
-/* === HOTSPOTS ORIGINALES === */
-.hotSpotElement .out {
-    border: 5px solid rgba(0, 123, 255, 0.8) !important;
-}
-
-.hotSpotElement .in {
-    background-color: rgba(0, 123, 255, 0.8) !important;
-}
-
 /* === HOTSPOTS PERSONALIZADOS (NUEVOS) === */
 
 /* Contenedor base */
@@ -165,6 +156,7 @@
         opacity: 0.8;
     }
 }
+
 
 
 
